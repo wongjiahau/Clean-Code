@@ -16,7 +16,35 @@ What does that mean?
 Is this comment important?
 ```
 # How to write **clean** code?
-## Use good variable name
+## Use good naming
+### You have to know the naming convention
+#### snake_case
+```cpp
+int total_ticket_price = 0;
+```
+#### CamelCase
+```cpp
+int totalTicketPrice = 0;
+```
+#### kebab-case
+```cpp
+int total-ticket-price = 0;
+```
+### Don't afraid to type long names!
+Now let's compare between bad name and good name.
+```cpp
+
+```
+
+### Function should be verbs
+```cpp
+//this is a good function definition
+void SaySomthing();
+
+//this is a bad function definition
+void menu();
+```
+
 
 
 ## About comments
@@ -31,6 +59,35 @@ int x = 5; //create an integer variable
 
 ## Single Responsibility Princile
 ## Side Effects
+```cpp
+
+//This function have side effects
+//Because it is calling I/O functions
+int say_hello(){
+    printf("%d", y);
+}
+
+int x = 5;
+
+//This function have side effects
+//Because it is using out-of-scope variable
+int perform_random_math(){
+    int y = x + 5;
+    return y;
+}
+
+//This function have no side effects
+//Because it is not calling any I/O functions
+//And it is not using any out-of-scopt variable
+int GetNumber(){
+    return 5;
+}
+```
+
+### We should avoid side effect whenever possible
+The reason is simple, when we have as less side effects as possible, we can catch the bug easily.
+  
+  On the other hand, if we write a lot of function which have side effects. I assure you, there will be a LOT of bugs flying in your program.
 
 # Utilize the editor
 ## Use shortcuts 
@@ -41,3 +98,12 @@ Press the following key :
 ```
 Ctrl+K Ctrl+D
 ```
+## Use the Light Bulb!
+![image](https://user-images.githubusercontent.com/23183656/31390266-03665594-ae06-11e7-991c-1f301c72f3c7.png)
+
+This is especially useful to help you to create methods.
+
+# Use Google and StackOverflow
+Whenever you face a problem, don't give up.   
+Just copy the error and search it in Google.  
+Most probably StackOverflow will have an answer for that.
