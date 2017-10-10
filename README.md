@@ -33,18 +33,31 @@ int total-ticket-price = 0;
 ### Don't afraid to type long names!
 Now let's compare between bad name and good name.
 ```cpp
-
+int tkt_no;  //bad name: cannot understand at first look
+int ticker_number; //good name
+int universiti_tunku_abdul_rahman_student_id; //bad name: should use known shortcuts
+int utar_student_id; //good name
 ```
 
 ### Function should be verbs
 ```cpp
-//this is a good function definition
-void SaySomthing();
-
 //this is a bad function definition
 void menu();
+
+//this is a good function definition
+void display_menu();
 ```
 
+### Don't use magic numbers!
+```cpp
+//Example of magic numbers
+int total_sleeping_hours = sleeping_hours_per_day * 7; //What is 7?
+```
+```cpp
+//How to avoid magic numbers
+const int NO_OF_DAY_PER_WEEK = 7;
+int total_sleeping_hours = sleeping_hours_per_day * NO_OF_DAY_PER_WEEK; 
+```
 
 
 ## About comments
@@ -53,9 +66,14 @@ For example, below is an unecessary comment :
 ```cpp
 int x = 5; //create an integer variable
 ```
+### Don't comment out useless code, just delete them
+```cpp
+```
 
 ### Don't use comment to explain what you are doing
 
+## About functions
+### Function should be one page long only
 
 ## Single Responsibility Princile
 ## Side Effects
