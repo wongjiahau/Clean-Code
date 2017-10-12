@@ -94,7 +94,8 @@ Before we talk about how to write good functions, let's look at the category of 
 | 1    | No                       | No              | `void say_hello();`              | Should only be used when I/O operation is involved. |
 | 2    | No                       | Yes             | `void print_number(int number);` | Should only be used when I/O operation is involved. |
 | 3    | Yes                      | No              | `int get_my_name();`             | Good.                                               |
-| 4    | Yes                      | Yes             | `int add(int x, int y);`         | Very good.                                          |
+| 4    | Yes                      | Yes             | `int add(int x, int y);`         | Very good.                                          |  
+
 As you can see Type 3 and Type 4 functions are consider good, so most of your functions should be of these types.   
 Moreover, you should avoid Type 1 and Type 2 functions whenever possible.  
 ## Avoid *Side Effects* if possible
