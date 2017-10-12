@@ -78,9 +78,6 @@ Before we talk about how to write good functions, let's look at the category of 
 | 4    | Yes                      | Yes             | `int add(int x, int y);`         | Very good.                                          |
 As you can see Type 3 and Type 4 functions are consider good, so most of your functions should be of these types.   
 Moreover, you should avoid Type 1 and Type 2 functions whenever possible.  
-### Function should be one page long only
-
-## Single Responsibility Princile
 ## Avoid *Side Effects* if possible
 ```cpp
 
@@ -111,6 +108,61 @@ int GetNumber(){
 The reason is simple, when we have as less side effects as possible, we can catch the bug easily.
   
   On the other hand, if we write a lot of function which have side effects. I assure you, there will be a LOT of bugs flying in your program.
+
+## Single Responsibility Princile (SRP)
+Now, let's talk about SRP. What is SRP? Basically it means ALL function should only handle ONE and only ONE job.
+Let's look at an example that violates SRP:
+```cpp
+void get_average(){
+    int number1;
+    int number2;
+    scanf("%d", &number1);
+    scanf("%d", &number2);
+    int result = (number1 + number2) / 2;
+    printf("The average is : %d", result);
+}
+```
+How does this code violate the SRP?  
+Because it is doing THREE things : 
+1. Get user input
+2. Calculate the result
+3. Print the result
+  
+So, how can we refactor this code so that it will follows SRP? Let's look below: 
+```cpp
+int get_number_from_user();
+int get_average(int x, int y);
+void print_result(int result);
+
+int main(){
+    int number1 = get_number_from_user();
+    int number2 = get_number_from_user();
+    int result = get_average(number1, number2);
+    print_result(result);
+}
+
+int get_number_from_user(){
+    int user_input;
+    printf("Please enter a number > ");
+    scanf("%d", &user_input);
+    return user_input;
+}
+
+int get_average(int x, int y){
+    return (x + y) / 2;
+}
+
+void print_result(int result){
+    printf("The average is : %d", result);
+}
+
+```
+## How to check whether my function is violating SRP?
+- Check if your function is longer than one page, if it is, it is most probably violating SRP already
+- Check if your function involve I/O functions such as `printf` and `scanf`
+- Ask your friend if he/she can understand your code
+    - if they can't understand your code properly, you're probably violating SRP already
+    - because if you follows SRP all the times, your code should be very easy to read, just like reading *novel*.
 
 # About comments
 ## Don't comment unless neccesary
@@ -145,6 +197,18 @@ check_for_error(user_choie);
 ```
 So the trick here is, whenever you feel like  you want to comment, just make the section becomes a **FUNCTION** !
 
+## So when should I comment?
+- When you are documenting the code
+- When you want to include license in the code
+- When you want to write some TODO 
+```cpp
+//Example of TODO
+int add_two_numbers(int x, int y){
+    //TODO: Complete the code here
+}
+```
+### Why do you need to use TODO?   
+Because sometimes you might suddenly have inspiration for doing other codes in other files but you're afraid you will forget what you are going to do in the current file.
 
 # Utilize the editor
 ## Use shortcuts 
