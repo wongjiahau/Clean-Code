@@ -52,17 +52,38 @@ int total_sleeping_hours = sleeping_hours_per_day * NO_OF_WEEKDAY_PER_WEEK ;
 ```
 
 
-## About comments
-### Don't comment unless neccesary
+# About comments
+## Don't comment unless neccesary
 For example, below is an unecessary comment : 
 ```cpp
 int x = 5; //create an integer variable
 ```
-### Don't comment out useless code, just delete them
+## Don't comment to explain what you're doing
 ```cpp
-```
+int x; //x is user choice
 
-### Don't use comment to explain what you are doing
+//display the menu
+printf("Welcome to LOL, please select an option\n");
+printf("Choice 1 : PLAY GAME");
+printf("Choice 2 : Check highscore");
+printf("Choice 3 : Quit");
+printf("Enter your choice >> ");
+
+//get the user input
+scanf("%d", &x);
+
+//check if user input is correct
+if(x < 1 || x > 3) printf("Error!");
+
+```
+So, the example above is a bad example, now let's look at a good example:
+```cpp
+int user_choice;
+display_menu();
+user_choice = get_user_input();
+check_for_error(user_choie);
+```
+So the trick here is, whenever you feel like  you want to comment, just make the section becomes a **FUNCTION** !
 
 ## About functions
 ### Function should be one page long only
