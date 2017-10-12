@@ -18,18 +18,11 @@ Is this comment important?
 # How to write **clean** code?
 ## Use good naming
 ### You have to know the naming convention
-#### snake_case
-```cpp
-int total_ticket_price = 0;
-```
-#### CamelCase
-```cpp
-int totalTicketPrice = 0;
-```
-#### kebab-case
-```cpp
-int total-ticket-price = 0;
-```
+| Type| Example| Languages that uses it|  
+| ------------- |:-------------:|----------|
+| snake_case| `int total_ticket_price = 0;` | C++, Python|
+| CamelCase      | `int totalTicketPrice = 0;` |Java, C#, Javascript
+| kebab-case | `int total-ticket-price = 0;` | Lisp
 ### Don't afraid to type long names!
 Now let's compare between bad name and good name.
 ```cpp
