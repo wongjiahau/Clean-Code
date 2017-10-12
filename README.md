@@ -16,34 +16,31 @@ What does that mean?
 Is this comment important?
 ```
 # How to write **clean** code?
-## Use good naming
+# Use good naming
 ### You have to know the naming convention
 | Type| Example| Languages that uses it|  
 | ------------- |:-------------:|----------|
 | snake_case| `int total_ticket_price = 0;` | C++, Python|
 | CamelCase      | `int totalTicketPrice = 0;` |Java, C#, Javascript
 | kebab-case | `int total-ticket-price = 0;` | Lisp
-### Don't afraid to type long names!
+## **Don't afraid to type LONG names!**
 Now let's compare between bad name and good name.
-```cpp
-int tkt_no;  //bad name: cannot understand at first look
-int ticker_number; //good name
-int universiti_tunku_abdul_rahman_student_id; //bad name: should use known shortcuts
-int utar_student_id; //good name
-```
-### About loops
+| Type    | Bad                                        | Good              | Reason                                                           |
+|---------|--------------------------------------------|-------------------|------------------------------------------------------------------|
+| int     | `tkt_cnt`                                  | `ticket_count`    | Variable name should be understandable during first read.        |
+| string  | `universiti_tunku_abdul_rahman_student_id` | `utar_student_id` | Popular short form should be used when possible.                 |
+| boolean | `finish`                                   | `is_finished`     | Boolean variable should be prefixed with 'is' and in past tense. |
+## About loops
 #### Use `break` instead of comparing to a boolean variable
 
-### Function should be verbs
-```cpp
-//this is a bad function definition
-void menu();
+## Function name should be meaningful
+| Bad function name | Good function name | Reason                                             |
+|-------------------|--------------------|----------------------------------------------------|
+| `menu()`          | `displayMenu()`    | Function name should be VERBS!                     |
+| `check()`         | `checkBalance()`   | Function name should be as specific as possible.   |
+| `func1()`         | -                  | WTH is func1? Function name should at least has some meaning.  |
 
-//this is a good function definition
-void display_menu();
-```
-
-### Don't use magic numbers!
+## Don't use magic numbers!
 ```cpp
 //Example of magic numbers
 int total_sleeping_hours = sleeping_hours_per_day * 7; //What is 7?
