@@ -23,7 +23,7 @@ Is this comment important?
 | snake_case| `int total_ticket_price = 0;` | C++, Python|
 | CamelCase      | `int totalTicketPrice = 0;` |Java, C#, Javascript
 | kebab-case | `int total-ticket-price = 0;` | Lisp
-## **Don't afraid to type LONG names!**
+## **Don't afraid to type LONG names!**  
 Now let's compare between bad name and good name.
 | Type    | Bad                                        | Good              | Reason                                                           |
 |---------|--------------------------------------------|-------------------|------------------------------------------------------------------|
@@ -69,7 +69,7 @@ if(!is_sad) printf("I'm not sad");
 ```
 
 # About GOOD functions
-Before we talk about how to write good functions, let's look at the category of functions:
+Before we talk about how to write good functions, let's look at the category of functions:  
 | Type | Have to return something | Have parameters | Example                          | Comments                                            |
 |------|--------------------------|-----------------|----------------------------------|-----------------------------------------------------|
 | 1    | No                       | No              | `void say_hello();`              | Should only be used when I/O operation is involved. |
