@@ -263,3 +263,12 @@ This is especially useful to help you to create methods.
 Whenever you face a problem, don't give up.   
 Just copy the error and search it in Google.  
 Most probably StackOverflow will have an answer for that.
+
+# To learn more about Clean Code ... 
+Please read this book :  
+![image](https://user-images.githubusercontent.com/23183656/31491338-94e1e938-af79-11e7-9468-c41325d75676.png)
+
+The link for this book is [here](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882).
+
+# Thank you for reading! 
+## If you like it please STAR this repository!
