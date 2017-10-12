@@ -68,6 +68,49 @@ bool is_sad;
 if(!is_sad) printf("I'm not sad");
 ```
 
+# About GOOD functions
+Before we talk about how to write good functions, let's look at the category of functions:
+| Type | Have to return something | Have parameters | Example                          | Comments                                            |
+|------|--------------------------|-----------------|----------------------------------|-----------------------------------------------------|
+| 1    | No                       | No              | `void say_hello();`              | Should only be used when I/O operation is involved. |
+| 2    | No                       | Yes             | `void print_number(int number);` | Should only be used when I/O operation is involved. |
+| 3    | Yes                      | No              | `int get_my_name();`             | Good.                                               |
+| 4    | Yes                      | Yes             | `int add(int x, int y);`         | Very good.                                          |
+As you can see Type 3 and Type 4 functions are consider good, so most of your functions should be of these types.   
+Moreover, you should avoid Type 1 and Type 2 functions whenever possible.  
+### Function should be one page long only
+
+## Single Responsibility Princile
+## Avoid *Side Effects* if possible
+```cpp
+
+//This function have side effects
+//Because it is calling I/O functions
+int say_hello(){
+    printf("%d", y);
+}
+
+int x = 5;
+
+//This function have side effects
+//Because it is using out-of-scope variable
+int perform_random_math(){
+    int y = x + 5;
+    return y;
+}
+
+//This function have no side effects
+//Because it is not calling any I/O functions
+//And it is not using any out-of-scopt variable
+int GetNumber(){
+    return 5;
+}
+```
+
+### We should avoid side effect whenever possible
+The reason is simple, when we have as less side effects as possible, we can catch the bug easily.
+  
+  On the other hand, if we write a lot of function which have side effects. I assure you, there will be a LOT of bugs flying in your program.
 
 # About comments
 ## Don't comment unless neccesary
@@ -102,40 +145,6 @@ check_for_error(user_choie);
 ```
 So the trick here is, whenever you feel like  you want to comment, just make the section becomes a **FUNCTION** !
 
-## About functions
-### Function should be one page long only
-
-## Single Responsibility Princile
-## Side Effects
-```cpp
-
-//This function have side effects
-//Because it is calling I/O functions
-int say_hello(){
-    printf("%d", y);
-}
-
-int x = 5;
-
-//This function have side effects
-//Because it is using out-of-scope variable
-int perform_random_math(){
-    int y = x + 5;
-    return y;
-}
-
-//This function have no side effects
-//Because it is not calling any I/O functions
-//And it is not using any out-of-scopt variable
-int GetNumber(){
-    return 5;
-}
-```
-
-### We should avoid side effect whenever possible
-The reason is simple, when we have as less side effects as possible, we can catch the bug easily.
-  
-  On the other hand, if we write a lot of function which have side effects. I assure you, there will be a LOT of bugs flying in your program.
 
 # Utilize the editor
 ## Use shortcuts 
