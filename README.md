@@ -47,9 +47,7 @@ Now let's compare between bad name and good name.
 | int     | `tkt_cnt`                                  | `ticket_count`    | Variable name should be understandable during first read.        |
 | string  | `universiti_tunku_abdul_rahman_student_id` | `utar_student_id` | Popular short form should be used when possible.                 |
 | boolean | `finish`                                   | `is_finished`     | Boolean variable should be prefixed with 'is' and in past tense. |
-## About loops
-#### Use `break` instead of comparing to a boolean variable
-
+    
 ## Function name should be meaningful  
 
 | Bad function name | Good function name | Reason                                             |
@@ -184,6 +182,23 @@ void print_result(int result){
     - if they can't understand your code properly, you're probably violating SRP already
     - because if you follows SRP all the times, your code should be very easy to read, just like reading *novel*.
 
+## About loops
+#### Use *INFINITE* loop and `break` instead of comparing to a boolean variable
+```cpp
+bool is_done = false;
+while(!is_done) {
+    int input = get_input();
+    if(input == 0) is_done = true;
+    else print(input);
+}
+
+// Below is a better way of doing it
+while(true) {
+    int input = get_input();
+    if (input == 0) break;
+    else print(input);
+}
+```
 # About comments
 ## Don't comment unless neccesary
 For example, below is an unecessary comment : 
