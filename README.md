@@ -50,6 +50,23 @@ int total_sleeping_hours = sleeping_hours_per_day * 5; //What is 5?
 const int NO_OF_WEEKDAY_PER_WEEK = 5;
 int total_sleeping_hours = sleeping_hours_per_day * NO_OF_WEEKDAY_PER_WEEK ; 
 ```
+## How to use boolean properly
+It is normal that beginners usually use boolean like the following :
+```cpp
+bool is_happy;
+if(is_happy == true) printf("I'm happy");
+
+bool is_sad;
+if(is_sad == false) printf("I'm not sad");
+```
+There's actually a better way of doing it:
+```cpp
+bool is_happy;
+if(is_happy) printf("I'm happy");
+
+bool is_sad;
+if(!is_sad) printf("I'm not sad");
+```
 
 
 # About comments
