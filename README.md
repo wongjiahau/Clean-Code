@@ -38,6 +38,8 @@ int ticker_number; //good name
 int universiti_tunku_abdul_rahman_student_id; //bad name: should use known shortcuts
 int utar_student_id; //good name
 ```
+### About loops
+#### Use `break` instead of comparing to a boolean variable
 
 ### Function should be verbs
 ```cpp
