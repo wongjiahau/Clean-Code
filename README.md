@@ -15,6 +15,19 @@ What the heck is this?
 What does that mean?
 Is this comment important?
 ```
+## The most important thing is that:  
+ If you're code is **clean**, you can catch bug **easily**.    
+ If you're code is **dirty**, bugs will crawl *everywhere* !
+
+### Let's explain it with a metaphor:
+Let's say one day you saw a cockroach running in your room, because you hate it so you want to catch it.  Now imagine for 2 cases : 
+- Case A : Your room is very tidy and clean
+- Case B : Your room is very messy and dirty  
+
+Now, for which case do you think it is easier for you to catch the cockroach?
+Of course is Case A! 
+So, this concepts also applies to coding. No exceptions.
+
 # How to write **clean** code?
 # Use good naming
 ### You have to know the naming convention  
