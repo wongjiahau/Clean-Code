@@ -17,14 +17,16 @@ Is this comment important?
 ```
 # How to write **clean** code?
 # Use good naming
-### You have to know the naming convention
+### You have to know the naming convention  
+
 | Type| Example| Languages that uses it|  
 | ------------- |:-------------:|----------|
 | snake_case| `int total_ticket_price = 0;` | C++, Python|
 | CamelCase      | `int totalTicketPrice = 0;` |Java, C#, Javascript
 | kebab-case | `int total-ticket-price = 0;` | Lisp
 ## **Don't afraid to type LONG names!**  
-Now let's compare between bad name and good name.
+Now let's compare between bad name and good name.  
+
 | Type    | Bad                                        | Good              | Reason                                                           |
 |---------|--------------------------------------------|-------------------|------------------------------------------------------------------|
 | int     | `tkt_cnt`                                  | `ticket_count`    | Variable name should be understandable during first read.        |
@@ -33,7 +35,8 @@ Now let's compare between bad name and good name.
 ## About loops
 #### Use `break` instead of comparing to a boolean variable
 
-## Function name should be meaningful
+## Function name should be meaningful  
+
 | Bad function name | Good function name | Reason                                             |
 |-------------------|--------------------|----------------------------------------------------|
 | `menu()`          | `displayMenu()`    | Function name should be VERBS!                     |
@@ -70,6 +73,7 @@ if(!is_sad) printf("I'm not sad");
 
 # About GOOD functions
 Before we talk about how to write good functions, let's look at the category of functions:  
+
 | Type | Have to return something | Have parameters | Example                          | Comments                                            |
 |------|--------------------------|-----------------|----------------------------------|-----------------------------------------------------|
 | 1    | No                       | No              | `void say_hello();`              | Should only be used when I/O operation is involved. |
