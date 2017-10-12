@@ -43,12 +43,12 @@ Now let's compare between bad name and good name.
 ## Don't use magic numbers!
 ```cpp
 //Example of magic numbers
-int total_sleeping_hours = sleeping_hours_per_day * 7; //What is 7?
+int total_sleeping_hours = sleeping_hours_per_day * 5; //What is 5?
 ```
 ```cpp
 //How to avoid magic numbers
-const int NO_OF_DAY_PER_WEEK = 7;
-int total_sleeping_hours = sleeping_hours_per_day * NO_OF_DAY_PER_WEEK; 
+const int NO_OF_WEEKDAY_PER_WEEK = 5;
+int total_sleeping_hours = sleeping_hours_per_day * NO_OF_WEEKDAY_PER_WEEK ; 
 ```
 
 
