@@ -315,6 +315,29 @@ int main(){
 
 
 ```
+More example:
+```cpp
+int get_ticket_type(){
+	int result;
+	printf("Choose a ticket type\n");
+	printf("1. Child\n2. Adult");
+	scanf("%d", &result);
+	return result;
+}
 
+const int CHILD_TYPE = 1;
+const int ADULT_TYPE = 2;
+int main(){	
+	while(true){
+		int ticket_type = get_ticket_type();
+		switch(ticket_type){
+			case CHILD_TYPE: //do the things 
+				break;
+			case ADULT_TYPE: //do things
+				break;
+		}
+	}	
+}
+```
 # Thank you for reading! 
 ## If you like it please STAR this repository!
