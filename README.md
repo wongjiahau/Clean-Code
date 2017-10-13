@@ -270,5 +270,51 @@ Please read this book :
 
 The link for this book is [here](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882).
 
+# Example of clean code
+```cpp
+#include <stdio.h>
+/*
+This is a code about a simple calculation program
+that receive 2 numbers from user 
+and print the sum of the numbers
+*/
+
+int get_number_from_user(){
+	int result;
+	printf("Enter a number >> ");
+	scanf("%d", &result);
+	return result;
+}
+
+int add(int x, int y){
+	return x + y;
+}
+
+void print_result(int result){
+	printf("The result is %d\n", result);
+}
+
+bool user_wants_to_continue(){
+	char input;
+	printf("Do you want to continue(Y/N)?");	
+	scanf("%c", &input);
+	if(input == 'y') return true;
+	else return false;
+}
+
+
+int main(){
+	while(true){
+		int number1 = get_number_from_user();
+		int number2 = get_number_from_user();
+		int result = add(number1, number2);
+		print_result(result);
+		if(!user_wants_to_continue()) break;
+	}	
+}
+
+
+```
+
 # Thank you for reading! 
 ## If you like it please STAR this repository!
