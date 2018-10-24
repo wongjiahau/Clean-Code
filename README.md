@@ -38,7 +38,7 @@ So, this concepts also applies to coding. No exceptions.
 | CamelCase      | `int totalTicketPrice = 0;` |Java, C#, Javascript|
 | kebab-case | `int total-ticket-price = 0;` | Lisp|  
 
-So, the rule is: *always follow the convention*.  In the example below, we will be using C++ to demonstrates examples, so `snake-case` will be used throughout this documentation.
+So, the rule is: *always follow the convention*.  In the example below, we will be using C++ to demonstrates examples, so `snake_case` will be used throughout this documentation.
 ## **Don't afraid to type LONG names!**  
 Now let's compare between bad name and good name.  
 
