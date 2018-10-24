@@ -127,7 +127,7 @@ The reason is simple, when we have as less side effects as possible, we can catc
   
   On the other hand, if we write a lot of function which have side effects. I assure you, there will be a LOT of bugs flying in your program.
 
-## Single Responsibility Princile (SRP)
+## Single Responsibility Principle (SRP)
 Now, let's talk about SRP. What is SRP? Basically it means ALL function should only handle ONE and only ONE job.
 Let's look at an example that violates SRP:
 ```cpp
